@@ -16,11 +16,11 @@ class Scraper:
     @classmethod
     def scrape(cls, driver, client_id, client_email_login):
         # Get letters
-        chains = driver.find_elements(By.XPATH, ChainsSelectors.CHAINS)
-        print(len(chains))
+        chains = driver.find_elements(By.XPATH, ChainsSelectors.CHAINS_ALL)
+        print('len chains:', len(chains))
 
         # Get ids and texts from messages
-        for chain in chains[-3:]:  # Change "chains[:2]" on "chains"
+        for chain in chains[:2]:  # Change "chains[:2]" on "chains"
             chain_id = Scraper.get_chain_id(chain)
             print(chain_id)
             chain.click()
@@ -158,8 +158,8 @@ class Scraper:
         next_button_class = next_button.get_attribute("class")
 
         if next_button_class in (
-            NextPageSelectors.NEXT_PAGE_REST,
-            NextPageSelectors.NEXT_PAGE_CLICK,
+                NextPageSelectors.NEXT_PAGE_REST,
+                NextPageSelectors.NEXT_PAGE_CLICK,
         ):
             next_button.click()
             time.sleep(random.randrange(1, 3))

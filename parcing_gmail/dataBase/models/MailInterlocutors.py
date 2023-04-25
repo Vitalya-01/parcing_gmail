@@ -1,5 +1,5 @@
-from playhouse.postgres_ext import *
-from dataBase.models.BaseModel import BaseModel
+from playhouse.sqlite_ext import *
+from parcing_gmail.dataBase.models.BaseModel import BaseModel
 
 
 class MailInterlocutors(BaseModel):

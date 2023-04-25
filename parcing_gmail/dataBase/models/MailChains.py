@@ -1,9 +1,7 @@
-from playhouse.postgres_ext import *
-from dataBase.models.BaseModel import BaseModel
-from dataBase.models.Clients import Clients
-from dataBase.models.MailInterlocutors import MailInterlocutors
-from selenium.webdriver.common.by import By
-from Selectors.ChainsSelector import ChainsSelectors
+from playhouse.sqlite_ext import *
+from parcing_gmail.dataBase.models.BaseModel import BaseModel
+from parcing_gmail.dataBase.models.Clients import Clients
+from parcing_gmail.dataBase.models.MailInterlocutors import MailInterlocutors
 
 
 class MailChains(BaseModel):

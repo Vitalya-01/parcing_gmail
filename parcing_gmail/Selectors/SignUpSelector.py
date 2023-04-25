@@ -8,3 +8,4 @@ class SignUpSelectors(str, Enum):
     PASSWORD_BOX = '//*[@id ="password"]/div[1]/div / div[1]/input'
     PASSWORD_NEXT = '//*[@id ="passwordNext"]'
     PASSWORD_ERROR = "//div[@class='EjBTad']"
+    CONFIRMATION_BOX = '//*[@id="next"]/div'

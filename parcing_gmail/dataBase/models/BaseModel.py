@@ -1,6 +1,5 @@
-from playhouse.postgres_ext import *
-from dataBase.db import instance
-import os
+from playhouse.sqlite_ext import *
+from parcing_gmail.dataBase.db import get_db_instance
 
 
 class BaseModel(Model):
@@ -8,5 +7,4 @@ class BaseModel(Model):
     updated_at = DateTimeField(constraints=[SQL("DEFAULT CURRENT_TIMESTAMP")])
 
     class Meta:
-        database = instance
-        schema = os.getenv("SCHEMA")
+        database = get_db_instance()
