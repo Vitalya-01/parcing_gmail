@@ -101,10 +101,10 @@ def main():
     # email = input("Enter email:")
     # password = input("Enter password:")
 
-    test = {'first_name': 'vit',
-            'last_name': 'buh',
-            'email': 'vitalikbuhtiarov@gmail.com',
-            'password': 'H3cZ81rQ'}
+    test = {'first_name': '',
+            'last_name': '',
+            'email': '@gmail.com',
+            'password': ''}
 
     # Create db and tables
     create_tables()
